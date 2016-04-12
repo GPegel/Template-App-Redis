@@ -82,3 +82,19 @@ Zabbix Template App Redis
 -Redis (used_memory)
 
 -Redis (used_memory_peak)	
+
+# Redis Triggers:
+
+-Redis queue length too high
+
+-Redis is down on {HOSTNAME}
+
+# Redis Graphs:
+
+-Redis clients
+
+-Redis ops\total lists
+
+-Redis used_cpu
+
+-Redis used_memory
