@@ -1,6 +1,9 @@
 # Zabbix-Template-App-Redis
 Zabbix Template App Redis
 
+Place the script on the REDIS server in the /etc/zabbix/scripts folder when you have an Zabbix Agent installed on it.
+Also make it executable otherwise it will not work.
+
 # Redis Items:
 
 -Redis (arch_bits)
