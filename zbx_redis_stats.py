@@ -10,7 +10,7 @@ parser.add_argument('-p','--port',dest='redis_port',action='store',help='Redis s
 parser.add_argument('-a','--auth',dest='redis_pass',action='store',help='Redis server pass',default=None)
 args = parser.parse_args()
 
-zabbix_host = '10.10.12.26'
+zabbix_host = '127.0.0.1' #IP address of Zabbix Server
              # Zabbix Server IP
 zabbix_port = 10051             # Zabbix Server Port
 
