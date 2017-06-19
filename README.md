@@ -1,12 +1,15 @@
 # Zabbix-Template-App-Redis
 Zabbix Template App Redis
 
-Place the script on the REDIS server in the /etc/zabbix/scripts folder when you have an Zabbix Agent installed on it.
-Also make it executable otherwise it will not work.
+***
 
-Do not forget to add this to a 'root' crontab.
+# Steps to follow:
+1. Place the script on a REDIS server in the "/etc/zabbix/scripts" folder when you have an Zabbix Agent installed on it.
+Also make it executable (`chmod +x`) otherwise it will not work.
 
-"* * * * * /etc/zabbix/scripts/zbx_redis_stats.py host_name -p 6379"
+2. Edit Zabix hostname in "zbx_redis_stats.py" file at line 13.
+
+3. Do not forget to add this to a 'root' crontab:  `* * * * * /etc/zabbix/scripts/zbx_redis_stats.py host_name -p 6379` where "host_name" is the the name of the Redis server.
 
 
 # Redis Items:
@@ -19,7 +22,7 @@ Do not forget to add this to a 'root' crontab.
 
 -Redis (blocked_clients)
 
--Redis (connected_clients)	
+-Redis (connected_clients)
 
 -Redis (client_biggest_input_buf)
 
@@ -31,7 +34,7 @@ Do not forget to add this to a 'root' crontab.
 
 -Redis (evicted_keys)
 
--Redis (keyspace_misses)	
+-Redis (keyspace_misses)
 
 -Redis (gcc_version)
 
@@ -41,13 +44,13 @@ Do not forget to add this to a 'root' crontab.
 
 -Redis (latest_fork_usec)
 
--Redis (lru_clock)	
+-Redis (lru_clock)
 
--Redis (expired_keys)	
+-Redis (expired_keys)
 
 -Redis (llenall)
 
--Redis (loading)	
+-Redis (loading)
 
 -Redis (mem_fragmentation_ratio)
 
@@ -55,7 +58,7 @@ Do not forget to add this to a 'root' crontab.
 
 -Redis (redis_git_dirty)
 
--Redis (pubsub_channels)	
+-Redis (pubsub_channels)
 
 -Redis (rdb_bgsave_in_progress)
 
@@ -81,7 +84,7 @@ Do not forget to add this to a 'root' crontab.
 
 -Redis (used_cpu_user_children)
 
--Redis (used_memory_rss)	
+-Redis (used_memory_rss)
 
 -Redis (total_connections_received)
 
@@ -89,7 +92,7 @@ Do not forget to add this to a 'root' crontab.
 
 -Redis (used_memory)
 
--Redis (used_memory_peak)	
+-Redis (used_memory_peak)
 
 # Redis Triggers:
 
@@ -106,3 +109,6 @@ Do not forget to add this to a 'root' crontab.
 -Redis used_cpu
 
 -Redis used_memory
+
+# For questions or suggestions:
+:email:  info@gerhardpegel.nl
