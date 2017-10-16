@@ -111,4 +111,4 @@ Also make it executable (`chmod +x`) otherwise it will not work.
 -Redis used_memory
 
 # For questions or suggestions:
-:email:  info@gerhardpegel.nl
+:email:  gpegel@gmail.com
