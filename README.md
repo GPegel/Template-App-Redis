@@ -9,7 +9,9 @@ Also make it executable (`chmod +x`) otherwise it will not work.
 
 2. Edit Zabix hostname in "zbx_redis_stats.py" file at line 13.
 
-3. Do not forget to add this to a 'root' crontab:  `* * * * * /etc/zabbix/scripts/zbx_redis_stats.py host_name -p 6379` where "host_name" is the the name of the Redis server.
+3. Import the template called 'zbx-template-redis` into Zabbix Front-End
+
+4. Do not forget to add this to a 'root' crontab:  `* * * * * /etc/zabbix/scripts/zbx_redis_stats.py host_name -p 6379` where "host_name" is the the name of the Redis server.
 
 
 # Redis Items:
