@@ -1,11 +1,12 @@
 # Zabbix-Template-App-Redis
+
 Zabbix Template App Redis
 
 ***
 
-# Steps to follow:
-1. Place the script on a REDIS server in the "/etc/zabbix/scripts" folder when you have an Zabbix Agent installed on it.
-Also make it executable (`chmod +x`) otherwise it will not work.
+## Steps to follow
+
+1. Place the script on a REDIS server in the "/etc/zabbix/scripts" folder when you have an Zabbix Agent installed on it. Also make it executable (`chmod +x`) otherwise it will not work.
 
 2. Edit Zabix hostname in "zbx_redis_stats.py" file at line 13.
 
@@ -13,8 +14,7 @@ Also make it executable (`chmod +x`) otherwise it will not work.
 
 4. Do not forget to add this to a 'root' crontab:  `* * * * * /etc/zabbix/scripts/zbx_redis_stats.py host_name -p 6379` where "host_name" is the the name of the Redis server.
 
-
-# Redis Items:
+## Redis Items
 
 -Redis (arch_bits)
 
@@ -96,13 +96,13 @@ Also make it executable (`chmod +x`) otherwise it will not work.
 
 -Redis (used_memory_peak)
 
-# Redis Triggers:
+### Redis Triggers
 
 -Redis queue length too high
 
 -Redis is down on {HOSTNAME}
 
-# Redis Graphs:
+### Redis Graphs
 
 -Redis clients
 
@@ -112,5 +112,6 @@ Also make it executable (`chmod +x`) otherwise it will not work.
 
 -Redis used_memory
 
-# For questions or suggestions:
+## For questions or suggestions
+
 Do not hesitate to open a new issue or do a pull-request.
